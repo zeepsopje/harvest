@@ -63,7 +63,7 @@ impl OAuth {
             .unwrap();
 
         let QueryString { access_token, scope } =
-            qs::from_str::<QueryString>(&uri)?;
+            qs::from_str(&uri)?;
 
         Ok(Self { access_token })
     }
