@@ -16,10 +16,6 @@ static APP_USER_AGENT: &str = concat!(
     env!("CARGO_PKG_VERSION"),
 );
 
-#[derive(thiserror::Error, Debug)]
-pub enum Error {
-}
-
 pub struct Harvest {
     client: reqwest::Client,
 }

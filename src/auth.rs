@@ -62,8 +62,7 @@ impl OAuth {
             .strip_suffix(" HTTP/1.1")
             .unwrap();
 
-        let QueryString { access_token, scope } =
-            qs::from_str(&uri)?;
+        let QueryString { access_token, scope } = qs::from_str(&uri)?;
 
         Ok(Self { access_token })
     }

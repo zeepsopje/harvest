@@ -11,11 +11,10 @@ async fn main() -> anyhow::Result<()> {
     };
 
     let harvest = Harvest::new(&oauth.access_token);
-
     let time_entries = harvest.get_time_entries().await;
 
     for entry in time_entries? {
-        println!("{}", entry.id);
+        dbg!(entry);
     }
 
     // Save after every operation
